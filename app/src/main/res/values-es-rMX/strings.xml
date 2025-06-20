@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">acmovie</string>
+
+    <!-- Home Screen -->
+    <string name="name_app">acmovie</string>
+    <string name="tab_movie">Películas</string>
+    <string name="tab_tv">Series de TV</string>
+
+    <string name="movie_upcoming">Próximas Películas</string>
+    <string name="movie_popular">Películas populares</string>
+    <string name="movie_top_rated">TPelículas mejor calificadas</string>
+
+    <string name="tv_show_upcoming">Series de TV actualmente en vivo</string>
+    <string name="tv_show_popular">Series de TV populares</string>
+    <string name="tv_show_top_rated">Series de TV mejor calificadas</string>
+
+    <string name="see_all">Ver todas</string>
+    <string name="poster_image">Poster</string>
+    <string name="backdrop_image">Backdrop</string>
+
+
+
+    <string name="button_view_detail">View detail</string>
+
+    <string name="navigation_item_movie">Películas</string>
+    <string name="navigation_item_tvshow">Series de TV</string>
+    <string name="navigation_item_search">Buscar</string>
+    <string name="navigation_item_favorite">Favorito</string>
+
+    <string name="status_rumored_label">Rumoreado</string>
+    <string name="status_planned_label">Planificado</string>
+    <string name="status_in_production_label">En producción</string>
+    <string name="status_post_production_label">Postproducción</string>
+    <string name="status_released_label">Publicado</string>
+    <string name="status_cancelled_label">Cancelado</string>
+
+</resources>
