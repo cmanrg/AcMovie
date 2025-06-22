@@ -17,7 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import dev.cmanrg.acmovie.movie.presentation.movie.MovieScreen
+import dev.cmanrg.acmovie.movie.presentation.MovieScreen
 import dev.cmanrg.acmovie.navigation.Destination
 import androidx.compose.runtime.getValue
 

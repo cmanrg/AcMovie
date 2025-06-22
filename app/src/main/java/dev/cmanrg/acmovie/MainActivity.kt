@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavigationHost(
                         navHostController = navController,
-                        startDestination = NavigationRoute.MainScreen,
+                        startDestination = NavigationRoute.DetailsScreen,
 
                         )
                 }

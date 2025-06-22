@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import dev.cmanrg.acmovie.MainScreen
+import dev.cmanrg.acmovie.detail.presentation.DetailScreen
 
 
 @Composable
@@ -21,8 +22,12 @@ fun NavigationHost(
         }
 
 
-        composable(NavigationRoute.MainScreen.route){
+        composable(NavigationRoute.MainScreen.route) {
             MainScreen()
+        }
+
+        composable(NavigationRoute.DetailsScreen.route) {
+            DetailScreen()
         }
     }
 

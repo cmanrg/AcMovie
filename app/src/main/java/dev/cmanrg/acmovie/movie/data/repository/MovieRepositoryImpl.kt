@@ -1,12 +1,12 @@
 package dev.cmanrg.acmovie.movie.data.repository
 
 import dev.cmanrg.acmovie.movie.data.mapper.toDomain
-import dev.cmanrg.acmovie.movie.data.remote.movie.TmdbMoviesApi
+import dev.cmanrg.acmovie.movie.data.remote.movie.MovieApi
 import dev.cmanrg.acmovie.movie.domain.models.Movie
 import dev.cmanrg.acmovie.movie.domain.repository.MovieRepository
 
 class MovieRepositoryImpl(
-    private val api: TmdbMoviesApi
+    private val api: MovieApi
 ) : MovieRepository {
 
 

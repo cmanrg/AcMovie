@@ -8,7 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.cmanrg.acmovie.core.network.interceptor.AuthInterceptor
 import dev.cmanrg.acmovie.core.network.constants.AcMovieApi
-import dev.cmanrg.acmovie.movie.data.remote.movie.TmdbMoviesApi
+import dev.cmanrg.acmovie.movie.data.remote.movie.MovieApi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -55,10 +55,6 @@ object NetworkModule {
             .build()
     }
 
-    @Singleton
-    @Provides
-    fun provideMovieApi(retrofit: Retrofit): TmdbMoviesApi {
-        return retrofit.create(TmdbMoviesApi::class.java)
-    }
+
 
 }

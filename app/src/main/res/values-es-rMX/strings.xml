@@ -28,6 +28,21 @@
     <string name="navigation_item_search">Buscar</string>
     <string name="navigation_item_favorite">Favorito</string>
 
+    <string name="adults_only">Sólo adultos</string>
+    <string name="suitable_for_everyone">Apto para todos</string>
+
+    <string name="tmdb">TMDb</string>
+    <string name="imdb">IMDb</string>
+    <string name="vote">Votos</string>
+
+    <string name="status">Estado:</string>
+    <string name="release_date">Fecha de publicación:</string>
+    <string name="director">Director:</string>
+    <string name="writers">Escritores:</string>
+    <string name="story_line">Historia</string>
+
+
+
     <string name="status_rumored_label">Rumoreado</string>
     <string name="status_planned_label">Planificado</string>
     <string name="status_in_production_label">En producción</string>

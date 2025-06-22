@@ -25,6 +25,19 @@
     <string name="navigation_item_search">Search</string>
     <string name="navigation_item_favorite">Favorite</string>
 
+    <string name="adults_only">Adults only</string>
+    <string name="suitable_for_everyone">Suitable for everyone</string>
+
+    <string name="tmdb">TMDb</string>
+    <string name="imdb">IMDb</string>
+    <string name="vote">Votes</string>
+    <string name="status">Status:</string>
+    <string name="release_date">Release date:</string>
+    <string name="director">Director:</string>
+    <string name="story_line">Storyline</string>
+    <string name="writers">Writers</string>
+
+
     <string name="status_rumored_label">Rumored</string>
     <string name="status_planned_label">Planned</string>
     <string name="status_in_production_label">In production</string>
