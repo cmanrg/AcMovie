@@ -41,7 +41,7 @@ import kotlinx.coroutines.delay
 fun Carousel(
     movies: List<Movie>,
     modifier: Modifier = Modifier,
-    onMovieClick: () -> Unit
+    onMovieClick: (Movie) -> Unit
 ) {
     val pagerState = rememberPagerState(
         pageCount = { movies.size }, // Total paginas
@@ -75,7 +75,7 @@ fun Carousel(
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = ripple(bounded = true),
-                        onClick = { onMovieClick() }
+                        onClick = { onMovieClick(movie) }
                     )
             ) {
 

@@ -1,4 +1,4 @@
-package dev.cmanrg.acmovie.movie.data.remote.model
+package dev.cmanrg.acmovie.core.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

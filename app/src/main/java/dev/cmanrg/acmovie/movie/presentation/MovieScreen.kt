@@ -22,7 +22,7 @@ import dev.cmanrg.acmovie.movie.presentation.components.MovieSection
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MovieScreen(
-    onMovieDetails: () -> Unit,
+    onMovieDetails: (Int) -> Unit,
     onSeeAllMovies: () -> Unit,
     viewModel: MovieViewModel = hiltViewModel()
 ) {
@@ -35,9 +35,11 @@ fun MovieScreen(
 
     ) { innerPadding ->
 
-        Box(modifier = Modifier
-            .fillMaxSize()
-            .padding(innerPadding)) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
 
             LazyColumn(
                 modifier = Modifier
@@ -51,7 +53,9 @@ fun MovieScreen(
                         movies = state.nowPlayingMovies,
                         modifier = Modifier
                             .height(500.dp),
-                        onMovieClick = {}
+                        onMovieClick = { movie ->
+                            onMovieDetails(movie.id)
+                        }
                     )
                 }
 
@@ -60,7 +64,10 @@ fun MovieScreen(
                     MovieSection(
                         title = stringResource(R.string.movie_upcoming),
                         movie = state.upcomingMovies,
-                        onMovieClick = { onMovieDetails },
+                        onMovieClick = { movie ->
+                            onMovieDetails(movie.id)
+
+                        },
                         onSeeAllClick = {}
                     )
                 }
@@ -69,7 +76,10 @@ fun MovieScreen(
                     MovieSection(
                         title = stringResource(R.string.movie_popular),
                         movie = state.popularMovies,
-                        onMovieClick = { onMovieDetails },
+                        onMovieClick = { movie ->
+                            onMovieDetails(movie.id)
+
+                        },
                         onSeeAllClick = {}
                     )
                 }
@@ -78,16 +88,15 @@ fun MovieScreen(
                     MovieSection(
                         title = stringResource(R.string.movie_top_rated),
                         movie = state.topRatedMovies,
-                        onMovieClick = { onMovieDetails },
+                        onMovieClick = { movie ->
+                            onMovieDetails(movie.id)
+                        },
                         onSeeAllClick = {}
                     )
                 }
 
             }
 
-
-
-            //AppHeaderWithTabs()
         }
 
     }

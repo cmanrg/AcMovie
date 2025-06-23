@@ -1,7 +1,7 @@
 package dev.cmanrg.acmovie.movie.data.mapper
 
 import dev.cmanrg.acmovie.core.util.ImageUrlProvider
-import dev.cmanrg.acmovie.movie.data.remote.model.MovieDto
+import dev.cmanrg.acmovie.core.model.MovieDto
 import dev.cmanrg.acmovie.movie.domain.models.Movie
 
 fun MovieDto.toDomain(): Movie{

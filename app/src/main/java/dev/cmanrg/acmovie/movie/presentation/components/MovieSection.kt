@@ -20,7 +20,7 @@ fun MovieSection(
     movie: List<Movie>,
     modifier: Modifier = Modifier,
     title: String,
-    onMovieClick: () -> Unit,
+    onMovieClick: (Movie) -> Unit,
     onSeeAllClick: () -> Unit
 ) {
 
@@ -42,7 +42,7 @@ fun MovieSection(
             itemsIndexed(movie) { index, movies ->
                 PosterCard(
                     image = movies.posterPath ?: "",
-                    onClick = { onMovieClick() }
+                    onClick = { onMovieClick(movies) }
                 )
             }
         }

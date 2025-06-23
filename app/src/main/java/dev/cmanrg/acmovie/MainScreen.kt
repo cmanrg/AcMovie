@@ -20,11 +20,14 @@ import androidx.navigation.compose.rememberNavController
 import dev.cmanrg.acmovie.movie.presentation.MovieScreen
 import dev.cmanrg.acmovie.navigation.Destination
 import androidx.compose.runtime.getValue
+import androidx.navigation.NavHostController
+import dev.cmanrg.acmovie.navigation.NavigationRoute
 
 
 @Composable
-fun MainScreen() {
-
+fun MainScreen(
+    navController: NavHostController,
+) {
     // 1. Controlador para las pestañas
     val innerNavController = rememberNavController()
 
@@ -71,7 +74,13 @@ fun MainScreen() {
             bottomItems.forEach { dest ->
                 composable(dest.route) {
                     when (dest) {
-                        Destination.MOVIE -> MovieScreen(onMovieDetails = {}, onSeeAllMovies = {})
+                        Destination.MOVIE -> MovieScreen(
+                            onMovieDetails = { movieId ->
+                                // Usa el NavController PRINCIPAL para navegar a pantallas FUERA del BottomNav
+                                navController.navigate(NavigationRoute.Detail.route + "movieId=$movieId")
+                            },
+                            onSeeAllMovies = { /*…*/ })
+
                         Destination.TV_SHOW -> Text(text = "TV Show")
                         Destination.SEARCH -> Text(text = "Search")
                         Destination.FAVORITE -> Text(text = "Favorite")

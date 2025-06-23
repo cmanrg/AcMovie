@@ -42,6 +42,15 @@
     <string name="story_line">Historia</string>
 
 
+    <string name="more_like_this">Ver más</string>
+    <string name="similar_movies">Películas similares</string>
+    <string name="recommendations">Recomendación</string>
+    <string name="about">Acerca de</string>
+    <string name="cast">Reparto y equipo</string>
+    <string name="gallery">Galería</string>
+    <string name="comments">Comentarios</string>
+    <string name="no_result">Sin resultados</string>
+
 
     <string name="status_rumored_label">Rumoreado</string>
     <string name="status_planned_label">Planificado</string>

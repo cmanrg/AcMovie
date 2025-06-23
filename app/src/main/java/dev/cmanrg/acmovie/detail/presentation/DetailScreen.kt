@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import dev.cmanrg.acmovie.detail.presentation.components.CoverImage
+import dev.cmanrg.acmovie.detail.presentation.components.DetailTabs
 import dev.cmanrg.acmovie.detail.presentation.components.MediaDetailsContent
 import dev.cmanrg.acmovie.detail.presentation.components.RatingSection
 import dev.cmanrg.acmovie.detail.presentation.components.StoryLine
@@ -18,7 +19,7 @@ import dev.cmanrg.acmovie.detail.presentation.components.StoryLine
 fun DetailScreen(
     viewModel: DetailViewModel = hiltViewModel()
 ) {
-    val state = viewModel.uiState
+    val state = viewModel.state
 
 
     when {
@@ -59,6 +60,13 @@ fun DetailScreen(
 
                 item {
                     StoryLine(movieDetails = state.detailMovie)
+                }
+
+                item {
+                    DetailTabs(
+                        movieSimilar = state.similarMovies,
+                        movieRecommended = state.recommendationsMovies,
+                    )
                 }
 
 

@@ -9,6 +9,8 @@ import dev.cmanrg.acmovie.detail.data.repository.DetailMovieRepositoryImpl
 import dev.cmanrg.acmovie.detail.domain.repository.movie.DetailMovieRepository
 import dev.cmanrg.acmovie.detail.domain.usecases.movie.DetailMovieUseCases
 import dev.cmanrg.acmovie.detail.domain.usecases.movie.GetMovieDetailsUseCase
+import dev.cmanrg.acmovie.detail.domain.usecases.movie.GetMovieSimilarUseCase
+import dev.cmanrg.acmovie.detail.domain.usecases.movie.GetMoviesRecommendationsUseCase
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
@@ -27,7 +29,9 @@ object DetailModule {
     @Provides
     fun provideDetailUseCases(repository: DetailMovieRepository): DetailMovieUseCases {
         return DetailMovieUseCases(
-            getMovieDetailsUseCase = GetMovieDetailsUseCase(repository)
+            getMovieDetailsUseCase = GetMovieDetailsUseCase(repository),
+            getSimilarMoviesUseCase = GetMovieSimilarUseCase(repository),
+            getMoviesRecommendationsUseCase = GetMoviesRecommendationsUseCase(repository)
         )
     }
 

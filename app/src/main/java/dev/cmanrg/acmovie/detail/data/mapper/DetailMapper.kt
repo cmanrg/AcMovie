@@ -1,12 +1,14 @@
 package dev.cmanrg.acmovie.detail.data.mapper
 
 import dev.cmanrg.acmovie.core.model.GenreDto
+import dev.cmanrg.acmovie.core.model.MovieDto
 import dev.cmanrg.acmovie.core.util.ImageUrlProvider
 import dev.cmanrg.acmovie.detail.data.remote.model.MovieDetailsDto
 import dev.cmanrg.acmovie.detail.data.remote.model.ProductionCompanyDto
 import dev.cmanrg.acmovie.detail.data.remote.model.ProductionCountryDto
 import dev.cmanrg.acmovie.detail.domain.model.Genre
 import dev.cmanrg.acmovie.detail.domain.model.MovieDetails
+import dev.cmanrg.acmovie.detail.domain.model.MovieResponse
 import dev.cmanrg.acmovie.detail.domain.model.ProductionCompany
 import dev.cmanrg.acmovie.detail.domain.model.ProductionCountry
 
@@ -39,6 +41,12 @@ fun MovieDetailsDto.toDomain(): MovieDetails {
     )
 
 
+}
+
+fun MovieDto.toDomain(): MovieResponse {
+    return MovieResponse(
+        posterPath = ImageUrlProvider.getFullUrl(posterPath, "w500")
+    )
 }
 
 private fun GenreDto.toDomain(): Genre {

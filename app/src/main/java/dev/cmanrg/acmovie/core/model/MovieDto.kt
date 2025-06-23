@@ -1,8 +1,7 @@
-package dev.cmanrg.acmovie.movie.data.remote.model
+package dev.cmanrg.acmovie.core.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import dev.cmanrg.acmovie.core.model.DetailPresentable
 
 // ESTE SERIA EL ARCHIVO MOVIEDTO
 @JsonClass(generateAdapter = true)

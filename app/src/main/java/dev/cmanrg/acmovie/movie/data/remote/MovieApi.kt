@@ -1,6 +1,6 @@
 package dev.cmanrg.acmovie.movie.data.remote.movie
 
-import dev.cmanrg.acmovie.movie.data.remote.model.MoviesResponse
+import dev.cmanrg.acmovie.core.model.MoviesResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

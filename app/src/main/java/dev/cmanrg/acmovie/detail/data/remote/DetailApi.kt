@@ -9,7 +9,7 @@ import dev.cmanrg.acmovie.core.model.VideosResponse
 import dev.cmanrg.acmovie.core.model.WatchProvidersResponse
 import dev.cmanrg.acmovie.detail.data.remote.model.Credits
 import dev.cmanrg.acmovie.detail.data.remote.model.MovieDetailsDto
-import dev.cmanrg.acmovie.movie.data.remote.model.MoviesResponse
+import dev.cmanrg.acmovie.core.model.MoviesResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
